@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GeoLocater.io</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>GeoLocater.io</h1>
+
+    <div class="container">
+      <div class="row">
+        <label>Google Maps API Key <span class="required">*</span></label>
+        <input type="text" id="apiKey" maxlength="40" />
+      </div>
+
+      <div class="row">
+        <label>Upload CSV File</label>
+        <div class="upload-button-wrapper">
+          <button id="uploadCSV">Choose File</button>
+        </div>
+        <p id="fileName"></p>
+      </div>
+      <p id="fileName"></p>
+
+      <button id="geolocateBtn">Geolocate</button>
+      <progress
+        id="progressBar"
+        value="0"
+        max="100"
+        style="display: none"
+      ></progress>
+
+      <a id="downloadLink" href="#" download style="display: none"
+        >Download Processed CSV File</a
+      >
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
